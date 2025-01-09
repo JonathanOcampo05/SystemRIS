@@ -38,6 +38,14 @@ public class Insumos {
         this.status = status;
     }
 
+    public Insumos(String nombre, String tipo, String descripcion, int cantidad, boolean status) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.status = status;
+    }
+
     public Long getId_insumo() {
         return id_insumo;
     }

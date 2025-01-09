@@ -1,7 +1,8 @@
 package com.example.RIS.insumos.control;
 
 import com.example.RIS.insumos.model.InsumosDTO;
-import org.aspectj.bridge.Message;
+
+import com.example.RIS.utils.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

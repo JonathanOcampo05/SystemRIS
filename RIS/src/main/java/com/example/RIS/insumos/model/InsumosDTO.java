@@ -1,16 +1,20 @@
 package com.example.RIS.insumos.model;
 
 import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 public class InsumosDTO{
 
     @NotNull
     private Long id_insumo;
 
+    @NotBlank
     private String nombre;
 
+    @NotBlank
     private String descripcion;
 
+    @NotBlank
     private String tipo;
 
     @NotNull
