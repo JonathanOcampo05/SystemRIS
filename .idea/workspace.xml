@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="546d055c-1a51-414c-b70f-b582cac3d490" name="Changes" comment="" />
+    <list default="true" id="546d055c-1a51-414c-b70f-b582cac3d490" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RIS/src/main/java/com/example/RIS/Doctor/control/DoctorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RIS/src/main/java/com/example/RIS/Doctor/control/DoctorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RIS/src/main/java/com/example/RIS/Doctor/model/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RIS/src/main/java/com/example/RIS/Doctor/model/DoctorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RIS/src/main/java/com/example/RIS/Doctor/model/DoctorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +21,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2rMLyqgURxZY5QUGAd5yxaRPu6E" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,17 +37,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/CA2-Enero/Desktop/SystemRIS",
+    "last_opened_file_path": "I:/4to C/App Web/act24",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\_new\5toCuatri\SystemRIS\RIS\src\main\java\com\example\RIS\Doctor" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
@@ -46,6 +71,9 @@
       <option name="presentableId" value="Default" />
       <updated>1736364255722</updated>
       <workItem from="1736364257712" duration="15000" />
+      <workItem from="1736385432148" duration="458000" />
+      <workItem from="1736385920671" duration="178000" />
+      <workItem from="1736386295404" duration="291000" />
     </task>
     <servers />
   </component>

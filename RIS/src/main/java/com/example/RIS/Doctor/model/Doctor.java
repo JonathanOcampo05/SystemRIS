@@ -1,32 +1,32 @@
-package com.example.RIS.FacturacionServicio.model;
+package com.example.RIS.Doctor.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "facturacion")
-public class Facturacion {
-
+@Table(name = "doctor")
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name", columnDefinition = "VARCHAR(30)")
     private String name;
-    @Column(name = "description", columnDefinition = "VARCHAR(100)")
-    private String description;
+    @Column(name = "email", columnDefinition = "VARCHAR(40)")
+    private String email;
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status;
 
 
-    public Facturacion() {
+    public Doctor() {
 
     }
 
-    public Facturacion(Long id, String name, String description, boolean status) {
+    public Doctor(Long id, String name, String email, boolean status) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.email = email;
         this.status = status;
     }
+
 
     public Long getId() {
         return id;
@@ -44,12 +44,12 @@ public class Facturacion {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public boolean isStatus() {
