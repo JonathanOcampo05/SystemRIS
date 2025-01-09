@@ -1,8 +1,13 @@
 package com.example.RIS.Patient.control;
 
 import com.example.RIS.Patient.model.Patient;
+import com.example.RIS.Patient.model.PatientDTO;
 import com.example.RIS.Patient.model.PatientRepository;
-import com.example.RIS.Report.model.Report;
+import com.example.RIS.Patient.model.Patient;
+import com.example.RIS.utils.Message;
+import com.example.RIS.utils.TypesResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,36 +37,80 @@ public class PatientService {
     }
 
     @Transactional(rollbackFor = {SQLException.class})
-    public Patient save(Patient patient) {
-        patient.setStatus(true);
-        return patientRepository.save(patient);
+    public ResponseEntity<Message> save(PatientDTO patientDTO) {
+        // Validaciones del DTO
+        if (patientDTO.getName().length() > 30) {
+            return new ResponseEntity<>(new Message("El nombre no puede tener más de 30 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        if (patientDTO.getEmail().length() > 40) {
+            return new ResponseEntity<>(new Message("El correo no puede tener más de 40 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+
+        // Crear un nuevo Patient a partir del DTO
+        Patient patient = new Patient();
+        patient.setName(patientDTO.getName());
+        patient.setEmail(patientDTO.getEmail());
+        patient.setAge(patientDTO.getAge());
+        patient.setTurn(patientDTO.getTurn());
+        patient.setSymptoms(patientDTO.getSymptoms());
+        patient.setSupplies(patientDTO.getSupplies());
+        patient.setStatus(true); // Por defecto se activa el estado
+
+        // Guardar el paciente
+        patient = patientRepository.save(patient);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(patient, "El paciente se registró correctamente", TypesResponse.SUCCESS), HttpStatus.CREATED);
+    }
+
+    @Transactional(rollbackFor = {SQLException.class})
+    public ResponseEntity<Message> update(PatientDTO patientDTO) {
+        Optional<Patient> patientOptional = patientRepository.findById(patientDTO.getId());
+        if (!patientOptional.isPresent()) {
+            return new ResponseEntity<>(new Message("El paciente no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
+        }
+
+        Patient patientUpdated = patientOptional.get();
+
+        // Validaciones del DTO
+        if (patientDTO.getName().length() > 30) {
+            return new ResponseEntity<>(new Message("El nombre no puede tener más de 30 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        if (patientDTO.getEmail().length() > 40) {
+            return new ResponseEntity<>(new Message("El correo no puede tener más de 40 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+
+        // Actualizar los campos del paciente
+        patientUpdated.setName(patientDTO.getName());
+        patientUpdated.setEmail(patientDTO.getEmail());
+        patientUpdated.setAge(patientDTO.getAge());
+        patientUpdated.setTurn(patientDTO.getTurn());
+        patientUpdated.setSymptoms(patientDTO.getSymptoms());
+        patientUpdated.setSupplies(patientDTO.getSupplies());
+        patientUpdated.setStatus(patientDTO.getStatus()); // Actualizar el estado si es necesario
+
+        // Guardar el paciente actualizado
+        patientRepository.saveAndFlush(patientUpdated);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(patientUpdated, "El paciente se actualizó correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
 
     @Transactional(rollbackFor = {SQLException.class})
-    public Patient update(Patient patient) {
-        Optional<Patient> objectOptional = patientRepository.findById(patient.getId());
-        if (objectOptional.isPresent()) {
-            Patient objectNew = objectOptional.get();
-            objectNew.setName(patient.getName());
-            objectNew.setEmail(patient.getEmail());
-            objectNew.setAge(patient.getAge());
-            objectNew.setTurn(patient.getTurn());
-            objectNew.setSymptoms(patient.getSymptoms());
-            objectNew.setSupplies(patient.getSupplies());
-            return patientRepository.save(objectNew);
+    public ResponseEntity<Message> changeStatus(Long id) {
+        Optional<Patient> patientOptional = patientRepository.findById(id);
+        if (!patientOptional.isPresent()) {
+            return new ResponseEntity<>(new Message("El paciente no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
-        return null;
-    }
 
-    public Patient changeStatus(Long id) {
-        Optional<Patient> objectOptional = patientRepository.findById(id);
-        if (objectOptional.isPresent()) {
-            Patient objectNew = objectOptional.get();
-            objectNew.setStatus(!objectNew.isStatus());
-            return patientRepository.save(objectNew);
-        }
-        return null;
-    }
+        Patient patient = patientOptional.get();
+        patient.setStatus(!patient.isStatus());
 
+        // Guardar el patiente con el nuevo estado
+        patientRepository.saveAndFlush(patient);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(patient, "El estado del paciente se cambió correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
+    }
 }

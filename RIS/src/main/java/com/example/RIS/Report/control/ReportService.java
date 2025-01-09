@@ -1,7 +1,12 @@
 package com.example.RIS.Report.control;
 
 import com.example.RIS.Report.model.Report;
+import com.example.RIS.Report.model.ReportDTO;
 import com.example.RIS.Report.model.ReportRepository;
+import com.example.RIS.utils.Message;
+import com.example.RIS.utils.TypesResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,33 +36,71 @@ public class ReportService {
     }
 
     @Transactional(rollbackFor = {SQLException.class})
-    public Report save(Report report) {
-        report.setStatus(true);
-        return reportRepository.save(report);
-    }
+    public ResponseEntity<Message> save(ReportDTO reportDTO) {
+        // Validaciones del DTO
+        if (reportDTO.getName().length() > 30) {
+            return new ResponseEntity<>(new Message("El nombre no puede tener más de 30 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        if (reportDTO.getDescription().length() > 100) {
+            return new ResponseEntity<>(new Message("La descripción no puede tener más de 100 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
 
+        // Crear un nuevo Report a partir del DTO
+        Report report = new Report();
+        report.setName(reportDTO.getName());
+        report.setDescription(reportDTO.getDescription());
+        report.setStatus(true); // Por defecto se activa el estado
+
+        // Guardar el reporte
+        report = reportRepository.save(report);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(report, "El reporte se registró correctamente", TypesResponse.SUCCESS), HttpStatus.CREATED);
+    }
 
     @Transactional(rollbackFor = {SQLException.class})
-    public Report update(Report report) {
-        Optional<Report> objectOptional = reportRepository.findById(report.getId());
-        if (objectOptional.isPresent()) {
-            Report objectNew = objectOptional.get();
-            objectNew.setName(report.getName());
-            objectNew.setDescription(report.getDescription());
-            return reportRepository.save(objectNew);
+    public ResponseEntity<Message> update(ReportDTO reportDTO) {
+        Optional<Report> reportOptional = reportRepository.findById(reportDTO.getId());
+        if (!reportOptional.isPresent()) {
+            return new ResponseEntity<>(new Message("El reporte no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
-        return null;
+
+        Report reportUpdated = reportOptional.get();
+
+        // Validaciones del DTO
+        if (reportDTO.getName().length() > 30) {
+            return new ResponseEntity<>(new Message("El nombre no puede tener más de 30 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        if (reportDTO.getDescription().length() > 100) {
+            return new ResponseEntity<>(new Message("La descripción no puede tener más de 100 caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+
+        // Actualizar los campos del reporte
+        reportUpdated.setName(reportDTO.getName());
+        reportUpdated.setDescription(reportDTO.getDescription());
+        reportUpdated.setStatus(reportDTO.getStatus()); // Actualizar el estado si es necesario
+
+        // Guardar el reporte actualizado
+        reportRepository.saveAndFlush(reportUpdated);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(reportUpdated, "El reporte se actualizó correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
-
-    public Report changeStatus(Long id) {
-        Optional<Report> objectOptional = reportRepository.findById(id);
-        if (objectOptional.isPresent()) {
-            Report objectNew = objectOptional.get();
-            objectNew.setStatus(!objectNew.isStatus());
-            return reportRepository.save(objectNew);
+    @Transactional(rollbackFor = {SQLException.class})
+    public ResponseEntity<Message> changeStatus(Long id) {
+        Optional<Report> reportOptional = reportRepository.findById(id);
+        if (!reportOptional.isPresent()) {
+            return new ResponseEntity<>(new Message("El reporte no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
-        return null;
-    }
 
+        Report report = reportOptional.get();
+        report.setStatus(!report.isStatus());
+
+        // Guardar el reporte con el nuevo estado
+        reportRepository.saveAndFlush(report);
+
+        // Responder con el mensaje de éxito
+        return new ResponseEntity<>(new Message(report, "El estado del reporte se cambió correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
+    }
 }
