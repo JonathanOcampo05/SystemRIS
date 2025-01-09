@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Pacientes</h1>
+        <form id="registroPaciente">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="turno">Turno:</label>
+                <input type="number" id="turno" name="turno" min="1" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="sintomas">Síntomas:</label>
+                <textarea id="sintomas" name="sintomas" rows="4" required></textarea>
+            </div>
+
+           
+            <div class="form-group">
+                <label>Insumos Recetados:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="Paracetamol"> Paracetamol</label>
+                    <label><input type="checkbox" value="Ibuprofeno"> Ibuprofeno</label>
+                    <label><input type="checkbox" value="Antibiótico"> Antibiótico</label>
+                    <label><input type="checkbox" value="Vitaminas"> Vitaminas</label>
+                </div>
+                <div id="seleccionados"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="doctor">Asignar Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="" disabled selected>Seleccione un doctor</option>
+                    <option value="drPerez">Dr. Pérez</option>
+                    <option value="drMartinez">Dr. Martínez</option>
+                    <option value="drSanchez">Dr. Sánchez</option>
+                    <option value="draLopez">Dra. López</option>
+                </select>
+            </div>
+            
+
+            
+            <div class="form-group">
+                <button type="submit">Registrar Paciente</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
