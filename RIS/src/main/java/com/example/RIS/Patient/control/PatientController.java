@@ -1,59 +1,41 @@
 package com.example.RIS.Patient.control;
 
-import com.example.RIS.Patient.model.Patient;
+import com.example.RIS.Patient.model.PatientDTO;
+import com.example.RIS.utils.Message;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
-@RequestMapping("/api")
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping("/patients")
 public class PatientController {
 
-    List<Patient> patient = new ArrayList<>();
-    private long idCounter = 1;
+    private final PatientService patientService;
+
+    @Autowired
+    public PatientController(PatientService patientService) {
+        this.patientService = patientService;
+    }
 
     @GetMapping("/all")
-    public List<Patient> findAll(){
-        return patient;
+    public ResponseEntity<Message> getAll() {
+        return patientService.findAll();
     }
 
-    @GetMapping("/{id}")
-    public Patient findById(@PathVariable Long id){
-        for (Patient p : patient) {
-            if (p.getId().equals(id)) {
-                return p;
-            }
-        }
-        return null; // Si no encuentra la materia
+    @PostMapping("/save")
+    public ResponseEntity<Message> savePatient(@Validated(PatientDTO.Register.class) @RequestBody PatientDTO dto) {
+        return patientService.save(dto);
     }
 
-    @PostMapping
-    public Patient register(@RequestBody Patient turno){
-        turno.setId(idCounter++);
-        patient.add(turno);
-        return turno;
+    @PutMapping("/update")
+    public ResponseEntity<Message> updatePatient(@Validated(PatientDTO.Modify.class) @RequestBody PatientDTO dto) {
+        return patientService.update(dto);
     }
 
-    @PutMapping
-    public Patient update(@RequestBody Patient turno){
-        for (Patient p : patient) {
-            if (p.getId().equals(turno.getId())) {
-                return p;
-            }
-        }
-        return null; // Si no encuentra la materia para actualizar
+    @PutMapping("/change-status")
+    public ResponseEntity<Message> changeStatus(@Validated(PatientDTO.ChangeStatus.class) @RequestBody PatientDTO dto) {
+        return patientService.changeStatus(dto.getId());
     }
-
-    @DeleteMapping("/{id}")
-    public String delete(@PathVariable Long id){
-        for (Patient p : patient) {
-            if (p.getId().equals(id)) {
-                patient.remove(p);
-                return "El paciente fue eliminado";
-            }
-        }
-        return "Paciente no encontrado";
-    }
-
 }

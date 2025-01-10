@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/report")
 public class ReportController {
 
     List<Patient> patient = new ArrayList<>();

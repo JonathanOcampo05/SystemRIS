@@ -58,9 +58,6 @@ public class InsumosService {
     public ResponseEntity<Message> save(InsumosDTO dto) {
         try {
 
-            if (insumosRepository.existsByName(dto.getNombre())) {
-                return new ResponseEntity<>(new Message("El nombre del proyecto ya existe", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
-            }
 
             // Crear un nuevo proyecto
             Insumos newInsumo = new Insumos(
@@ -87,9 +84,7 @@ public class InsumosService {
                 .orElseThrow(() -> new RuntimeException("El proyecto no existe"));
 
 
-        if (!insumos.getNombre().equals(dto.getNombre()) && insumosRepository.existsByName(dto.getNombre())) {
-            return new ResponseEntity<>(new Message("El nombre del insumo ya existe", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
-        }
+
 
         insumos.setNombre(dto.getNombre());
         insumos.setDescripcion(dto.getDescripcion());

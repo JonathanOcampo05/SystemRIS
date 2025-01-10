@@ -4,6 +4,7 @@ import com.example.RIS.Patient.model.Patient;
 import com.example.RIS.Patient.model.PatientDTO;
 import com.example.RIS.Patient.model.PatientRepository;
 import com.example.RIS.Patient.model.Patient;
+import com.example.RIS.insumos.model.Insumos;
 import com.example.RIS.utils.Message;
 import com.example.RIS.utils.TypesResponse;
 import org.springframework.http.HttpStatus;
@@ -27,8 +28,9 @@ public class PatientService {
     }
 
     @Transactional(readOnly = true)
-    public List<Patient> findAll() {
-        return patientRepository.findAll();
+    public ResponseEntity<Message> findAll() {
+        List<Patient> patients = patientRepository.findAll();
+        return new ResponseEntity<>(new Message(patients, "Lista de insumos", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
     @Transactional(readOnly = true)

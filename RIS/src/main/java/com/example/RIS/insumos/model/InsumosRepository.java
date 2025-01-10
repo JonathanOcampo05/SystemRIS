@@ -14,6 +14,5 @@ public interface InsumosRepository extends JpaRepository<Insumos,Long> {
 
     List<Insumos> findAll();
 
-    boolean existsByName(String nombre);
 
 }
