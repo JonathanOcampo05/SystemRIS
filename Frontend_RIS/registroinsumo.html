@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Insumos</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Insumos</h1>
+        <form id="registroInsumo">
+
+            
+            <div class="form-group">
+                <label for="nombre">Nombre del Insumo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="tipo">Tipo de Insumo:</label>
+                <input type="text" id="tipo" name="tipo" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="status">Estado:</label>
+                <select id="status" name="status" required>
+                    <option value="true">Disponible</option>
+                    <option value="false">No Disponible</option>
+                </select>
+            </div>
+
+            
+            <!-- <div class="form-group">
+                <label>Insumos Relacionados:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="Guantes"> Guantes</label>
+                    <label><input type="checkbox" value="Jeringas"> Jeringas</label>
+                    <label><input type="checkbox" value="Gasas"> Gasas</label>
+                    <label><input type="checkbox" value="Alcohol"> Alcohol</label>
+                </div>
+                <input type="hidden" id="insumosSeleccionados" name="insumosSeleccionados">
+            </div> -->
+
+            
+            <div class="form-group">
+                <button type="submit">Registrar Insumo</button>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
