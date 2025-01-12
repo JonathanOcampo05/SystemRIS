@@ -23,11 +23,11 @@ public class PatientDTO {
     @NotNull(groups = {PatientDTO.Register.class, PatientDTO.Modify.class}, message = "La edad no puede ser nula")
     @Min(value = 0, message = "La edad debe ser mayor o igual a 0")
     @Max(value = 150, message = "La edad debe ser menor o igual a 150")
-    private Integer age;
+    private int age;
 
     @NotNull(groups = {PatientDTO.Register.class, PatientDTO.Modify.class}, message = "El turno no puede ser nulo")
     @Min(value = 1, message = "El turno debe ser al menos 1")
-    private Integer turn;
+    private int turn;
 
     @NotBlank(groups = {PatientDTO.Register.class, PatientDTO.Modify.class}, message = "Los síntomas no pueden estar vacíos")
     @Size(max = 100, message = "Los síntomas no pueden tener más de 100 caracteres")
@@ -36,6 +36,9 @@ public class PatientDTO {
     @NotBlank(groups = {PatientDTO.Register.class, PatientDTO.Modify.class}, message = "Los suministros no pueden estar vacíos")
     @Size(max = 100, message = "Los suministros no pueden tener más de 100 caracteres")
     private String supplies;
+
+     @NotBlank
+     private String doctor;
 
     @NotNull(groups = {PatientDTO.ChangeStatus.class}, message = "El estado no puede ser nulo")
     private Boolean status;
@@ -68,19 +71,19 @@ public class PatientDTO {
         this.email = email;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Integer getTurn() {
+    public int getTurn() {
         return turn;
     }
 
-    public void setTurn(Integer turn) {
+    public void setTurn(int turn) {
         this.turn = turn;
     }
 
@@ -106,6 +109,14 @@ public class PatientDTO {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
     }
 
     // Interfaces para validación por grupos

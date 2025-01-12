@@ -56,6 +56,7 @@ public class PatientService {
         patient.setTurn(patientDTO.getTurn());
         patient.setSymptoms(patientDTO.getSymptoms());
         patient.setSupplies(patientDTO.getSupplies());
+        patient.setDoctor(patientDTO.getDoctor());
         patient.setStatus(true); // Por defecto se activa el estado
 
         // Guardar el paciente

@@ -22,6 +22,8 @@ public class Patient {
     private String supplies;
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status;
+    @Column(name = "doctor", columnDefinition = "VARCHAR(100)")
+    private String doctor;
 
 
     public Patient() {
@@ -29,6 +31,17 @@ public class Patient {
     }
 
     public Patient(Long id, String name, String email, int age, int turn, String symptoms, String supplies, boolean status) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.turn = turn;
+        this.symptoms = symptoms;
+        this.supplies = supplies;
+        this.status = status;
+    }
+
+    public Patient(Long id, String name, String email, int age, int turn, String symptoms, String supplies,String doctor, boolean status) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -94,6 +107,14 @@ public class Patient {
 
     public void setSupplies(String supplies) {
         this.supplies = supplies;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public String getDoctor() {
+        return doctor;
     }
 
     public boolean isStatus() {

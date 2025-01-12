@@ -16,16 +16,17 @@ document.getElementById("registroPaciente").addEventListener("submit", async fun
     const doctor = document.getElementById("doctor").value;
     const supplies = document.getElementById("insumos").value; // Recuperar el valor del campo oculto
 
-    
+
     const paciente = {
-        name: name,         
-        age: age,           
-        email: email,       
-        shift: shift,       
-        symptoms: symptoms, 
+        name: name,
+        age: age,
+        email: email,
+        shift: shift,
+        symptoms: symptoms,
         supplies: supplies,
-        doctor: doctor,    
+        doctor: doctor,
     };
+
 
     try {
         
