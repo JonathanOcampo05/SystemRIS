@@ -116,4 +116,22 @@ public class PatientService {
         // Responder con el mensaje de éxito
         return new ResponseEntity<>(new Message(patient, "El estado del paciente se cambió correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
     }
+
+     // Método para obtener pacientes activos
+     public List<Patient> getPacientesActivos() {
+        return patientRepository.findByStatusTrue();
+    }
+
+    // Método para cambiar el estado de un paciente
+    public boolean cambiarEstadoPaciente(Long id, boolean nuevoEstado) {
+        Patient patient = patientRepository.findById(id).orElse(null);
+        if (patient != null) {
+            patient.setStatus(nuevoEstado);
+            patientRepository.save(patient);
+            return true;
+        }
+        return false;
+    }
+
+    
 }

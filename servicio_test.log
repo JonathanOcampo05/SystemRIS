@@ -1,0 +1,289 @@
+2025-01-27T00:11:48.647-06:00  INFO 3324 --- [RIS] [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 3324 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T00:11:48.664-06:00  INFO 3324 --- [RIS] [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T00:11:50.914-06:00  INFO 3324 --- [RIS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T00:11:51.293-06:00  INFO 3324 --- [RIS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 354 ms. Found 4 JPA repository interfaces.
+2025-01-27T00:11:52.768-06:00  INFO 3324 --- [RIS] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-27T00:11:52.793-06:00  INFO 3324 --- [RIS] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T00:11:52.794-06:00  INFO 3324 --- [RIS] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27T00:11:52.927-06:00  INFO 3324 --- [RIS] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T00:11:52.928-06:00  INFO 3324 --- [RIS] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4143 ms
+2025-01-27T00:11:53.301-06:00  INFO 3324 --- [RIS] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T00:11:53.417-06:00  INFO 3324 --- [RIS] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-27T00:11:53.473-06:00  INFO 3324 --- [RIS] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-27T00:11:53.937-06:00  INFO 3324 --- [RIS] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T00:11:54.034-06:00  INFO 3324 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T00:11:54.518-06:00  INFO 3324 --- [RIS] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f7a20da
+2025-01-27T00:11:54.522-06:00  INFO 3324 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T00:11:54.616-06:00  WARN 3324 --- [RIS] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27T00:11:54.619-06:00  WARN 3324 --- [RIS] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T00:11:54.674-06:00  INFO 3324 --- [RIS] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27T00:11:56.033-06:00  INFO 3324 --- [RIS] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27T00:11:56.380-06:00  INFO 3324 --- [RIS] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T00:11:57.161-06:00  WARN 3324 --- [RIS] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T00:11:57.281-06:00  INFO 3324 --- [RIS] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-01-27T00:11:57.921-06:00  WARN 3324 --- [RIS] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f2589a00-1e40-4880-b39c-2df7eccd763e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-01-27T00:11:57.953-06:00  INFO 3324 --- [RIS] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-27T00:11:58.334-06:00  INFO 3324 --- [RIS] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-27T00:11:58.356-06:00  INFO 3324 --- [RIS] [main] com.example.RIS.RisApplication           : Started RisApplication in 10.716 seconds (process running for 11.707)
+2025-01-27T00:12:03.249-06:00  INFO 3324 --- [RIS] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T00:12:03.251-06:00  INFO 3324 --- [RIS] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T00:12:03.257-06:00  INFO 3324 --- [RIS] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-27T00:39:54.857-06:00  INFO 19448 --- [RIS] [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 19448 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T00:39:54.864-06:00  INFO 19448 --- [RIS] [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T00:39:57.287-06:00  INFO 19448 --- [RIS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T00:39:57.474-06:00  INFO 19448 --- [RIS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 155 ms. Found 4 JPA repository interfaces.
+2025-01-27T00:39:58.817-06:00  INFO 19448 --- [RIS] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-27T00:39:58.848-06:00  INFO 19448 --- [RIS] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T00:39:58.849-06:00  INFO 19448 --- [RIS] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27T00:39:58.999-06:00  INFO 19448 --- [RIS] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T00:39:59.000-06:00  INFO 19448 --- [RIS] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4005 ms
+2025-01-27T00:39:59.356-06:00  INFO 19448 --- [RIS] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T00:39:59.486-06:00  INFO 19448 --- [RIS] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-27T00:39:59.566-06:00  INFO 19448 --- [RIS] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-27T00:40:00.235-06:00  INFO 19448 --- [RIS] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T00:40:00.303-06:00  INFO 19448 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T00:40:00.832-06:00  INFO 19448 --- [RIS] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cc93da4
+2025-01-27T00:40:00.836-06:00  INFO 19448 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T00:40:00.935-06:00  WARN 19448 --- [RIS] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27T00:40:00.938-06:00  WARN 19448 --- [RIS] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T00:40:01.005-06:00  INFO 19448 --- [RIS] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27T00:40:02.483-06:00  INFO 19448 --- [RIS] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27T00:40:02.864-06:00  INFO 19448 --- [RIS] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T00:40:03.564-06:00  WARN 19448 --- [RIS] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes\com\example\RIS\security\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'securityConfig' defined in file [C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes\com\example\RIS\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.RIS.security.JwtAuthenticationFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-27T00:40:03.566-06:00  INFO 19448 --- [RIS] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T00:40:03.730-06:00  INFO 19448 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-27T00:40:03.756-06:00  INFO 19448 --- [RIS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-27T00:40:03.765-06:00  INFO 19448 --- [RIS] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-27T00:40:03.809-06:00  INFO 19448 --- [RIS] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-27T00:40:03.864-06:00 ERROR 19448 --- [RIS] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.RIS.security.SecurityConfig required a bean of type 'com.example.RIS.security.JwtAuthenticationFilter' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.RIS.security.JwtAuthenticationFilter' in your configuration.
+
+2025-01-27T00:46:17.022-06:00  INFO 15108 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 15108 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T00:46:17.028-06:00  INFO 15108 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T00:46:18.533-06:00  INFO 15108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T00:46:18.666-06:00  INFO 15108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2025-01-27T00:46:20.004-06:00  INFO 15108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T00:46:20.023-06:00  INFO 15108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T00:46:20.025-06:00  INFO 15108 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T00:46:20.238-06:00  INFO 15108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T00:46:20.239-06:00  INFO 15108 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3129 ms
+2025-01-27T00:46:20.588-06:00  INFO 15108 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T00:46:20.729-06:00  INFO 15108 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T00:46:20.733-06:00  INFO 15108 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T00:46:21.037-06:00  INFO 15108 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T00:46:21.315-06:00  INFO 15108 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T00:46:21.347-06:00  INFO 15108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T00:46:21.888-06:00  INFO 15108 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7910f355
+2025-01-27T00:46:21.891-06:00  INFO 15108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T00:46:21.958-06:00  WARN 15108 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T00:46:22.336-06:00  INFO 15108 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T00:46:23.429-06:00  INFO 15108 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T00:46:23.730-06:00  INFO 15108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T00:46:24.666-06:00  WARN 15108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T00:46:25.164-06:00  INFO 15108 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@600b3bee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@129348e8, org.springframework.security.web.context.SecurityContextHolderFilter@65fe1f47, org.springframework.security.web.header.HeaderWriterFilter@2111d7b9, org.springframework.security.web.authentication.logout.LogoutFilter@659e003e, com.example.RIS.security.JwtAuthenticationFilter@2b0e9f30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2165d4ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a8ab98f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ad64c, org.springframework.security.web.access.ExceptionTranslationFilter@c3a1d7f, org.springframework.security.web.access.intercept.AuthorizationFilter@66428512]
+2025-01-27T00:46:25.575-06:00  INFO 15108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T00:46:25.593-06:00  INFO 15108 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 9.209 seconds (process running for 9.8)
+2025-01-27T00:47:16.689-06:00  INFO 15108 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T00:47:16.692-06:00  INFO 15108 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T00:47:16.696-06:00  INFO 15108 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-27T01:08:02.926-06:00  INFO 5992 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 5992 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T01:08:02.931-06:00  INFO 5992 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T01:08:04.848-06:00  INFO 5992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T01:08:05.009-06:00  INFO 5992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 4 JPA repository interfaces.
+2025-01-27T01:08:07.129-06:00  INFO 5992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T01:08:07.160-06:00  INFO 5992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T01:08:07.163-06:00  INFO 5992 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T01:08:07.540-06:00  INFO 5992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T01:08:07.546-06:00  INFO 5992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4516 ms
+2025-01-27T01:08:08.499-06:00  INFO 5992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T01:08:08.718-06:00  INFO 5992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T01:08:08.724-06:00  INFO 5992 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T01:08:08.962-06:00  INFO 5992 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T01:08:09.222-06:00  INFO 5992 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T01:08:09.308-06:00  INFO 5992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T01:08:10.090-06:00  INFO 5992 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34ab26a
+2025-01-27T01:08:10.096-06:00  INFO 5992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T01:08:10.200-06:00  WARN 5992 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T01:08:10.999-06:00  INFO 5992 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T01:08:12.235-06:00  INFO 5992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T01:08:12.713-06:00  INFO 5992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T01:08:14.064-06:00  WARN 5992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T01:08:14.849-06:00  INFO 5992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2319c1e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@659e003e, org.springframework.security.web.context.SecurityContextHolderFilter@2148849f, org.springframework.security.web.header.HeaderWriterFilter@474deb4c, org.springframework.security.web.authentication.logout.LogoutFilter@363a09a2, com.example.RIS.security.JwtAuthenticationFilter@2b0e9f30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63c66980, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dc5e857, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f3c866c, org.springframework.security.web.access.ExceptionTranslationFilter@397f925e, org.springframework.security.web.access.intercept.AuthorizationFilter@64245ca9]
+2025-01-27T01:08:15.286-06:00  INFO 5992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T01:08:15.302-06:00  INFO 5992 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 13.247 seconds (process running for 14.025)
+2025-01-27T01:08:30.400-06:00  INFO 5992 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T01:08:30.402-06:00  INFO 5992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T01:08:30.407-06:00  INFO 5992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-01-27T01:32:10.880-06:00  INFO 13820 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 13820 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T01:32:10.885-06:00  INFO 13820 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T01:32:12.765-06:00  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T01:32:12.966-06:00  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 4 JPA repository interfaces.
+2025-01-27T01:32:14.895-06:00  INFO 13820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T01:32:14.912-06:00  INFO 13820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T01:32:14.913-06:00  INFO 13820 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T01:32:15.164-06:00  INFO 13820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T01:32:15.166-06:00  INFO 13820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4185 ms
+2025-01-27T01:32:15.587-06:00  INFO 13820 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T01:32:15.707-06:00  INFO 13820 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T01:32:15.714-06:00  INFO 13820 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T01:32:15.946-06:00  INFO 13820 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T01:32:16.259-06:00  INFO 13820 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T01:32:16.293-06:00  INFO 13820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T01:32:16.766-06:00  INFO 13820 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60a01cb
+2025-01-27T01:32:16.770-06:00  INFO 13820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T01:32:16.871-06:00  WARN 13820 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T01:32:17.202-06:00  INFO 13820 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T01:32:18.425-06:00  INFO 13820 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T01:32:18.879-06:00  INFO 13820 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T01:32:19.968-06:00  WARN 13820 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T01:32:20.540-06:00  INFO 13820 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35975b05, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@474deb4c, org.springframework.security.web.context.SecurityContextHolderFilter@11fa11b2, org.springframework.security.web.header.HeaderWriterFilter@68ea1eb5, org.springframework.security.web.authentication.logout.LogoutFilter@19d3f4fb, com.example.RIS.security.JwtAuthenticationFilter@7930ffa9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c678a1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@217009bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ba02f70, org.springframework.security.web.access.ExceptionTranslationFilter@6f9999f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3180131e]
+2025-01-27T01:32:20.895-06:00  INFO 13820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T01:32:20.910-06:00  INFO 13820 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 10.902 seconds (process running for 11.704)
+2025-01-27T01:42:16.316-06:00  INFO 13820 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T01:42:16.317-06:00  INFO 13820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T01:42:16.319-06:00  INFO 13820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-27T03:06:07.239-06:00  INFO 19324 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 19324 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T03:06:07.243-06:00  INFO 19324 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T03:06:08.858-06:00  INFO 19324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T03:06:08.980-06:00  INFO 19324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2025-01-27T03:06:10.260-06:00  INFO 19324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T03:06:10.283-06:00  INFO 19324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T03:06:10.284-06:00  INFO 19324 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T03:06:10.483-06:00  INFO 19324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T03:06:10.484-06:00  INFO 19324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3159 ms
+2025-01-27T03:06:10.791-06:00  INFO 19324 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T03:06:10.882-06:00  INFO 19324 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T03:06:10.886-06:00  INFO 19324 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T03:06:11.072-06:00  INFO 19324 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:06:11.303-06:00  INFO 19324 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T03:06:11.333-06:00  INFO 19324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T03:06:11.892-06:00  INFO 19324 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7910f355
+2025-01-27T03:06:11.896-06:00  INFO 19324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T03:06:11.981-06:00  WARN 19324 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T03:06:12.308-06:00  INFO 19324 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:06:13.222-06:00  INFO 19324 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T03:06:13.627-06:00  INFO 19324 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T03:06:14.504-06:00  WARN 19324 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T03:06:15.009-06:00  INFO 19324 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@659e003e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f3c866c, org.springframework.security.web.context.SecurityContextHolderFilter@9771c71, org.springframework.security.web.header.HeaderWriterFilter@6ba02f70, org.springframework.security.web.authentication.logout.LogoutFilter@63d14dbf, com.example.RIS.security.JwtAuthenticationFilter@2b0e9f30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8cce9ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ce0f50a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16e0afab, org.springframework.security.web.access.ExceptionTranslationFilter@35975b05, org.springframework.security.web.access.intercept.AuthorizationFilter@66cb9a63]
+2025-01-27T03:06:15.507-06:00  INFO 19324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T03:06:15.519-06:00  INFO 19324 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 9.259 seconds (process running for 10.251)
+2025-01-27T03:06:34.394-06:00  INFO 19324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T03:06:34.395-06:00  INFO 19324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T03:06:34.399-06:00  INFO 19324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-27T03:10:03.100-06:00  INFO 9620 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 9620 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T03:10:03.104-06:00  INFO 9620 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T03:10:04.457-06:00  INFO 9620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T03:10:04.612-06:00  INFO 9620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 4 JPA repository interfaces.
+2025-01-27T03:10:06.069-06:00  INFO 9620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T03:10:06.094-06:00  INFO 9620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T03:10:06.096-06:00  INFO 9620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T03:10:06.328-06:00  INFO 9620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T03:10:06.331-06:00  INFO 9620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3148 ms
+2025-01-27T03:10:06.703-06:00  INFO 9620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T03:10:06.820-06:00  INFO 9620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T03:10:06.825-06:00  INFO 9620 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T03:10:07.286-06:00  INFO 9620 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:10:07.570-06:00  INFO 9620 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T03:10:07.602-06:00  INFO 9620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T03:10:08.115-06:00  INFO 9620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@176333ee
+2025-01-27T03:10:08.121-06:00  INFO 9620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T03:10:08.207-06:00  WARN 9620 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T03:10:08.602-06:00  INFO 9620 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:10:09.658-06:00  INFO 9620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T03:10:10.000-06:00  INFO 9620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T03:10:10.965-06:00  WARN 9620 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T03:10:11.493-06:00  INFO 9620 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67521a79, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73839f22, org.springframework.security.web.context.SecurityContextHolderFilter@3a36da5e, org.springframework.security.web.header.HeaderWriterFilter@3180131e, org.springframework.security.web.authentication.logout.LogoutFilter@35a2ea5a, com.example.RIS.security.JwtAuthenticationFilter@6198e9b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52afcdd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35975b05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1512efe9, org.springframework.security.web.access.ExceptionTranslationFilter@350d9d23, org.springframework.security.web.access.intercept.AuthorizationFilter@2566247d]
+2025-01-27T03:10:11.871-06:00  INFO 9620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T03:10:11.891-06:00  INFO 9620 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 9.438 seconds (process running for 10.042)
+2025-01-27T03:10:25.787-06:00  INFO 9620 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T03:10:25.788-06:00  INFO 9620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T03:10:25.793-06:00  INFO 9620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-01-27T03:23:33.413-06:00  INFO 9376 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 9376 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T03:23:33.420-06:00  INFO 9376 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T03:23:34.976-06:00  INFO 9376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T03:23:35.124-06:00  INFO 9376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 4 JPA repository interfaces.
+2025-01-27T03:23:36.858-06:00  INFO 9376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T03:23:36.945-06:00  INFO 9376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T03:23:36.961-06:00  INFO 9376 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T03:23:37.323-06:00  INFO 9376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T03:23:37.324-06:00  INFO 9376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3799 ms
+2025-01-27T03:23:37.642-06:00  INFO 9376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T03:23:37.741-06:00  INFO 9376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T03:23:37.744-06:00  INFO 9376 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T03:23:37.963-06:00  INFO 9376 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:23:38.226-06:00  INFO 9376 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T03:23:38.259-06:00  INFO 9376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T03:23:38.728-06:00  INFO 9376 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30d5e37c
+2025-01-27T03:23:38.731-06:00  INFO 9376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T03:23:38.822-06:00  WARN 9376 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T03:23:39.256-06:00  INFO 9376 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:23:40.160-06:00  INFO 9376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T03:23:40.578-06:00  INFO 9376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T03:23:41.719-06:00  WARN 9376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T03:23:42.250-06:00  INFO 9376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@bb1b872, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64245ca9, org.springframework.security.web.context.SecurityContextHolderFilter@35975b05, org.springframework.security.web.header.HeaderWriterFilter@b1f36e5, org.springframework.security.web.authentication.logout.LogoutFilter@4d3bde85, com.example.RIS.security.JwtAuthenticationFilter@3667faa8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ba02f70, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2148849f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66cb9a63, org.springframework.security.web.access.ExceptionTranslationFilter@3b8a063d, org.springframework.security.web.access.intercept.AuthorizationFilter@73839f22]
+2025-01-27T03:23:42.629-06:00  INFO 9376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T03:23:42.640-06:00  INFO 9376 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 10.017 seconds (process running for 10.593)
+2025-01-27T03:23:52.987-06:00  INFO 9376 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T03:23:52.989-06:00  INFO 9376 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T03:23:52.993-06:00  INFO 9376 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-27T03:25:55.956-06:00  INFO 18652 --- [main] com.example.RIS.RisApplication           : Starting RisApplication using Java 17.0.10 with PID 18652 (C:\Users\jonyo\OneDrive\Escritorio\SystemRIS\RIS\target\classes started by jonyo in C:\Users\jonyo\OneDrive\Escritorio\SystemRIS)
+2025-01-27T03:25:55.960-06:00  INFO 18652 --- [main] com.example.RIS.RisApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-01-27T03:25:57.372-06:00  INFO 18652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27T03:25:57.510-06:00  INFO 18652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 4 JPA repository interfaces.
+2025-01-27T03:25:59.168-06:00  INFO 18652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-01-27T03:25:59.196-06:00  INFO 18652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-27T03:25:59.197-06:00  INFO 18652 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-01-27T03:25:59.469-06:00  INFO 18652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-27T03:25:59.471-06:00  INFO 18652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3419 ms
+2025-01-27T03:25:59.827-06:00  INFO 18652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27T03:25:59.977-06:00  INFO 18652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-01-27T03:25:59.983-06:00  INFO 18652 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-01-27T03:26:00.310-06:00  INFO 18652 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:26:00.754-06:00  INFO 18652 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27T03:26:00.783-06:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-27T03:26:01.339-06:00  INFO 18652 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@176333ee
+2025-01-27T03:26:01.345-06:00  INFO 18652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-27T03:26:01.417-06:00  WARN 18652 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-27T03:26:01.814-06:00  INFO 18652 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-01-27T03:26:02.753-06:00  INFO 18652 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-27T03:26:03.093-06:00  INFO 18652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27T03:26:04.163-06:00  WARN 18652 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27T03:26:04.640-06:00  INFO 18652 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67521a79, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73839f22, org.springframework.security.web.context.SecurityContextHolderFilter@3a36da5e, org.springframework.security.web.header.HeaderWriterFilter@3180131e, org.springframework.security.web.authentication.logout.LogoutFilter@35a2ea5a, com.example.RIS.security.JwtAuthenticationFilter@75156240, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52afcdd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35975b05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1512efe9, org.springframework.security.web.access.ExceptionTranslationFilter@350d9d23, org.springframework.security.web.access.intercept.AuthorizationFilter@2566247d]
+2025-01-27T03:26:05.014-06:00  INFO 18652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-27T03:26:05.030-06:00  INFO 18652 --- [main] com.example.RIS.RisApplication           : Started RisApplication in 9.737 seconds (process running for 10.445)
+2025-01-27T03:26:27.088-06:00  INFO 18652 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27T03:26:27.090-06:00  INFO 18652 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-27T03:26:27.097-06:00  INFO 18652 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms

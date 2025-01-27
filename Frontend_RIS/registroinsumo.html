@@ -63,6 +63,22 @@
         </form>
     </div>
 
+    <script>
+        
+    
+         function checkLogin() {
+            const token = localStorage.getItem('jwt_token');
+            if (!token) {
+                window.location.href = 'http://127.0.0.1:5500/Frontend_RIS/noAuth.html';  
+                return;
+            }
+        }
+    
+        checkLogin();
+
+    
+    </script>
+
     
 </body>
 </html>

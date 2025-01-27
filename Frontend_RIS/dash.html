@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clinica Adonai</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="hidden">
+    <div class="centrado" id="onload">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <header>
+      <nav class="nav">
+        <div class="logo">CLINICA ADONAI</div>
+        <ul class="menu">
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="registro.html">Pacientes</a></li>
+          <li><a href="registroinsumo.html">Insumos</a></li>
+          <li><a href="#" id="logoutBtn">Cerrar sesion</a></li>
+        </ul>
+      </nav>
+      <section class="textos-header" id="inicio">
+        <h1>Clinica-Adonai</h1>
+        <h2>Cuidamos de ti, desliza para más.</h2>
+      </section>
+
+      <div class="wave" style="height: 150px; overflow: hidden">
+        <svg
+          loading="lazy"
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%"
+        >
+          <path
+            d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero__main container">
+        <div class="hero__texts">
+          <h1 class="hero__title">Mejora tu salud</h1>
+          <p class="hero__paragraph">Aprende como mejorar tu calidad de vida</p>
+          <p class="hero__paragraph">Más información aquí.</p>
+          <div class="left">
+            <a
+              href="https://hospitalveugenia.com/blog/consejos-de-salud/10-habitos-saludables-para-cambiar-tu-estilo-de-vida-y-mejorar-tu-salud/"
+              class="cta"
+              >Haz click</a
+            >
+          </div>
+        </div>
+
+        <figure class="hero__pic">
+          <img loading="lazy" src="img/heart.jpg" class="hero__img" id="graf" />
+        </figure>
+      </section>
+
+      <section class="contenedor sobre-nosotros" id="cursos">
+        <h2 class="titulo">Nuestros valores</h2>
+        <div class="contenedor-sobre-nosotros">
+          <img
+            loading="lazy"
+            src="img/valores.avif"
+            alt=""
+            class="imagen-about-us"
+          />
+          <div class="contenido-textos">
+            <h3><span>1</span>Responsabilidad</h3>
+            <p>
+              Nos comprometemos a darte la mejor atencion y cuidados posibles.
+            </p>
+            <h3><span>2</span>Respeto</h3>
+            <p>
+              Nos comprometemos a darte un lugar tranquilo y donde te sientas
+              comodo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-services" id="serv">
+        <div class="contenedor">
+          <h2 class="titulo">Nuestros servicios</h2>
+          <div class="servicio-cont">
+            <div class="servicio-ind">
+              <img
+                loading="lazy"
+                src="img/consultas.webp"
+                class="serv-img"
+                alt=""
+              />
+              <h3>Consultas</h3>
+              <p>Diagnosticos confiables y seguros</p>
+            </div>
+            <div class="servicio-ind">
+              <img loading="lazy" src="img/tomo.jpg" class="serv-img" alt="" />
+              <h3>Tomografias</h3>
+              <p>Te ofrecemos la tecnologia al alcance de tus manos .</p>
+            </div>
+            <div class="servicio-ind">
+              <img loading="lazy" src="img/auxi.jpeg" class="serv-img" alt="" />
+              <h3>Clases de primeros auxilios</h3>
+              <p>
+                Conocerás las mejores alternativas para poder tratar un
+                accidente y poder salvar vidas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contenedor-footer" id="contact">
+        <div class="content-foo">
+          <h4>Teléfono</h4>
+          <p>7771523546</p>
+        </div>
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>clinicaadonai25@gmail.com</p>
+        </div>
+        <div class="content-foo">
+          <h4>Facebook</h4>
+          <p>https://facebook.com/ClinicaAdonai</p>
+        </div>
+      </div>
+      <h2 class="title-end">&copy; 2025 Clinica-Adonai.com</h2>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+
+      // Función para verificar si el token es válido
+      function checkLogin() {
+        const token = localStorage.getItem("jwt_token");
+        if (!token) {
+          window.location.href =
+            "http://127.0.0.1:5500/Frontend_RIS/noAuth.html";
+          return;
+        }
+        
+      }
+
+      checkLogin();
+
+      function logout() {
+        localStorage.removeItem("jwt_token"); // Elimina el token del almacenamiento local
+        window.location.href = "http://127.0.0.1:5500/Frontend_RIS/index.html";
+      }
+
+      document.getElementById("logoutBtn").addEventListener("click", logout);
+    </script>
+
+    <script src="code.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
